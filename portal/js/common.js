@@ -3,8 +3,8 @@ function pinyinRead(pinyin) {
 
 
 
-    //var filePath ='https://hanyu-word-pinyin-short.cdn.bcebos.com/' + pinyin + '.mp3';
-     var filePath ='http://appcdn.fanyi.baidu.com/zhdict/mp3/' + pinyin + '.mp3';
+    var filePath ='https://hanyu-word-pinyin-short.cdn.bcebos.com/' + pinyin + '.mp3';
+    // var filePath ='http://appcdn.fanyi.baidu.com/zhdict/mp3/' + pinyin + '.mp3';
     audioPlay(filePath);
 }
 
