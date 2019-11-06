@@ -21,10 +21,16 @@ function pinyinRead(pinyin) {
  * @param word
  * @param way  1 有道   2 百度
  */
-function englishRead(word,way,speed){
+function englishRead(word,way,speed,lan){
 
-    var wayUrl = {"yd":"http://tts.youdao.com/fanyivoice?word={0}&le=eng",
-    "bd":"https://fanyi.baidu.com/gettts?lan=en&text={0}&spd={1}&source=web"}
+    // http://tts.youdao.com/fanyivoice?word={0}&le=eng
+    var wayUrl = {"yd":"http://dict.youdao.com/dictvoice?audio={0}&type={2}",
+    "bd":"https://fanyi.baidu.com/gettts?lan={2}&text={0}&spd={1}&source=web"}
+
+
+
+    //  lan [ uk   en ]
+    // source [ alading  web]
 
     if(!way){
         way = "bd";
@@ -33,8 +39,23 @@ function englishRead(word,way,speed){
     if(!speed){
         speed = 2;
     }
+
+
+
+    if(!lan){
+        lan = "en";
+    }
+
+    if(way=='yd'){
+        if(lan=="en"){
+            lan = "2";
+        }else{
+            lan = "1";
+        }
+    }
+
     var url = wayUrl[way];
-    url = url.format(word,speed);
+    url = url.format(word,speed,lan);
 
     // url = url.format({word:word});
 
