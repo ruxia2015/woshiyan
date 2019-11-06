@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Portfolio Three Columns | Triangle</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <style>
+        dl.word >dd {
+            padding: 10px ;
+            background-color: #4cae4c;
+            font-size: large;
+            color: #fff;
+            margin: 2px;
+            float: left;
+        }
+        dl.word >dd:hover{
+            cursor: pointer;
+        }
+    </style>
+</head><!--/head-->
+
+<body>
+<header slot="tmp_header" id="header"></header>
+<!--/#header-->
+
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">动物词汇</h1>
+                        <p>英语动物词汇</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+
+<section id="projects">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-8">
+                <div class="row">
+                    <ul class="portfolio-filter text-center">
+                        <li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
+                        <li><a class="btn btn-default" href="#" data-filter=".farm">农场动物</a></li>
+                        <li><a class="btn btn-default" href="#" data-filter=".wild1">野生动物1</a></li>
+                        <li><a class="btn btn-default" href="#" data-filter=".wild2">野生动物2</a></li>
+                        <li><a class="btn btn-default" href="#" data-filter=".wild3">野生动物3</a></li>
+                        <li><a class="btn btn-default" href="#" data-filter=".fish">鱼</a></li>
+
+                    </ul><!--/#portfolio-filter-->
+
+                    <div class="portfolio-items" id="app">
+                        <template v-for="(tmp, key) in info.animals">
+                            <div class="col-xs-12 col-sm-12 col-md-12 portfolio-item  "  :class="key"  >
+                                <div class="portfolio-wrapper">
+                                    <div class="portfolio-info ">
+                                        <div class="portfolio-single">
+                                            <div class="portfolio-thumb">
+                                                <img :src="'picture/'+key+'.jpg'" class="img-responsive" alt="" style="max-height: 300px;width: auto;">
+                                            </div>
+                                        </div>
+                                        <dl class="word">
+                                            <dd style=""  v-for="(value, index) in tmp" v-on:click="englishPlay" ><rt>{{value.word}}</rt> {{value.yb}}  {{value.zw}}</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+
+
+                    </div>
+                    <!--<div class="portfolio-pagination">-->
+                        <!--<ul class="pagination">-->
+                            <!--<li><a href="#">left</a></li>-->
+                            <!--<li><a href="#">1</a></li>-->
+                            <!--<li><a href="#">2</a></li>-->
+                            <!--<li class="active"><a href="#">3</a></li>-->
+                            <!--<li><a href="#">4</a></li>-->
+                            <!--<li><a href="#">5</a></li>-->
+                            <!--<li><a href="#">6</a></li>-->
+                            <!--<li><a href="#">7</a></li>-->
+                            <!--<li><a href="#">8</a></li>-->
+                            <!--<li><a href="#">9</a></li>-->
+                            <!--<li><a href="#">right</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 padding-top">
+                <div class="sidebar portfolio-sidebar">
+                    <div class="sidebar-item categories">
+                        <h3>分类</h3>
+                        <ul class="nav navbar-stacked">
+                            <li><a href="yy-sx.html">十二生肖<span class="pull-right"></span></a></li>
+                            <li class="active"><a href="#">动物<span class="pull-right"></span></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="sidebar-item  recent">
+                        <h3>Recent Projects</h3>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="images/portfolio/project1.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on  07 March 2014</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="images/portfolio/project2.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on  07 March 2014</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="images/portfolio/project3.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on  07 March 2014</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-item popular">
+                        <h3>Popular Projects</h3>
+                        <ul class="gallery">
+                            <li><a href="#"><img src="images/portfolio/popular1.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="images/portfolio/popular2.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="images/portfolio/popular3.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="images/portfolio/popular4.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="images/portfolio/popular5.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="images/portfolio/popular1.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#projects-->
+
+
+<footer id="footer" slot="tmp_footer"></footer>
+<!--/#footer-->
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="js/lightbox.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/axios.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $("dl.word>dd").click(function () {
+
+            var $this = $(this);
+            var attr = $this.find("rt").text()
+
+            var way = $("input[name='way']:checked").val();
+            var speed = $("input[name='speed']:checked").val();
+            var lan = $("input[name='lan']:checked").val();
+
+            englishRead(attr,way,speed,lan);
+        })
+
+        moduleLoad("./template/page-template.html");
+
+
+        new Vue({
+            el: '#app',
+            data () {
+                return {
+                    info: null
+                }
+            },
+
+            methods:{
+                englishPlay:function(event){
+                    var $this = $(event.toElement);
+                    var attr = $this.find("rt").text()
+
+                    var way = $("input[name='way']:checked").val();
+                    var speed = $("input[name='speed']:checked").val();
+                    var lan = $("input[name='lan']:checked").val();
+
+                    englishRead(attr,way,speed,lan);
+                }
+            },
+            mounted () {
+                axios
+                    .get('data/english.json')
+                    .then(response => (this.info = response.data))
+                    .catch(function (error) { // 请求失败处理
+                        console.log(error);
+                    });
+            }
+        })
+
+
+
+
+
+
+    })
+</script>
+</body>
+</html>

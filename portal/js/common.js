@@ -22,6 +22,9 @@ function pinyinRead(pinyin) {
  * @param way  1 有道   2 百度
  */
 function englishRead(word,way,speed,lan){
+    if(!word || word.length ==0){
+        return;
+    }
 
     // http://tts.youdao.com/fanyivoice?word={0}&le=eng
     var wayUrl = {"yd":"http://dict.youdao.com/dictvoice?audio={0}&type={2}",

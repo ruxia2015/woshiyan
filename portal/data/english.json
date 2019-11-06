@@ -1,0 +1,241 @@
+{
+  "animals":
+  {
+    "farm":   [
+      {
+        "word": "sheep",
+        "yb":" /ʃiːp/",
+        "zw":"绵羊"
+      },
+      {
+        "word": "lamb",
+        "yb":" /læm/",
+        "zw":"小羊"
+      },
+      {
+        "word": "pig",
+        "yb":" /pɪɡ/",
+        "zw":"猪"
+      },
+      {
+        "word": "cow",
+        "yb":" /kaʊ/",
+        "zw":"奶牛"
+      },
+      {
+        "word": "calf",
+        "yb":" /kæf/",
+        "zw":"小牛"
+      },
+      {
+        "word": "horse",
+        "yb":" /hɔːs/",
+        "zw":"马"
+      },
+      {
+        "word": "donkey",
+        "yb":" /ˈdɑŋkɪ/",
+        "zw":"驴子"
+      },
+      {
+        "word": "cat",
+        "yb":" /kæt/",
+        "zw":"猫"
+      },
+      {
+        "word": "dog",
+        "yb":" /dɔːɡ/",
+        "zw":"狗"
+      }
+    ],
+    "wild1":   [
+      {
+        "word": "mouse",
+        "yb":" /maʊs/",
+        "zw":"老鼠"
+      },
+      {
+        "word": "frog",
+        "yb":" /frɑːɡ/",
+        "zw":"青蛙"
+      },
+      {
+        "word": "kangaroo",
+        "yb":" /ˌkæŋɡəˈruː/",
+        "zw":"袋鼠"
+      },
+      {
+        "word": "owl",
+        "yb":" /aʊl/",
+        "zw":"猫头鹰"
+      },
+      {
+        "word": "deer",
+        "yb":" /dɪr/",
+        "zw":"鹿"
+      },
+      {
+        "word": "turtle",
+        "yb":" /ˈtɜːrtl/",
+        "zw":"龟"
+      },
+      {
+        "word": "monkey",
+        "yb":" /ˈmʌŋki/",
+        "zw":"猴子"
+      },
+      {
+        "word": "koala",
+        "yb":" /koʊˈɑːlə/",
+        "zw":"树袋熊"
+      },
+      {
+        "word": "hippo",
+        "yb":" /hɪpo/",
+        "zw":"河马"
+      }
+    ],
+    "wild2":   [
+      {
+        "word": "cheetah",
+        "yb":" /ˈtʃiːtə/",
+        "zw":"猎豹"
+      },
+      {
+        "word": "lion",
+        "yb":" /ˈlaɪən/",
+        "zw":" 狮子"
+      },
+      {
+        "word": "tiger",
+        "yb":" /ˈtaɪɡər/",
+        "zw":"老虎"
+      },
+      {
+        "word": "rhino",
+        "yb":" /ˈraɪnoʊ/",
+        "zw":"犀牛"
+      },
+      {
+        "word": "zebra",
+        "yb":" /ˈzibrə/",
+        "zw":"斑马"
+      },
+      {
+        "word": "skunk",
+        "yb":" /skʌŋk/",
+        "zw":"臭鼬"
+      },
+      {
+        "word": "squirrel",
+        "yb":" /ˈskwɜ:rəl/",
+        "zw":"松鼠"
+      },
+      {
+        "word": "racoon",
+        "yb":" /ræˈkuːn/",
+        "zw":"浣熊"
+      }
+
+    ],
+    "wild3":   [
+      {
+        "word": "camel",
+        "yb":" /ˈkæml/",
+        "zw":"骆驼"
+      },
+      {
+        "word": "crocodile",
+        "yb":" /ˈkrɑːkədaɪl/",
+        "zw":"鳄鱼 "
+      },
+      {
+        "word": "panda",
+        "yb":" /ˈpændə/",
+        "zw":"熊猫"
+      },
+      {
+        "word": "elephant",
+        "yb":" /ˈɛləfənt/",
+        "zw":"象"
+      },
+      {
+        "word": "bear",
+        "yb":" /ber/",
+        "zw":"熊"
+      },
+      {
+        "word": "giraffe",
+        "yb":" /dʒəˈræf/",
+        "zw":"长颈鹿"
+      },
+      {
+        "word": "fox",
+        "yb":" /fɑːks/",
+        "zw":"狐狸"
+      },
+      {
+        "word": "wolf",
+        "yb":" /wʊlf/",
+        "zw":"狼"
+      },
+      {
+        "word": "elk",
+        "yb":" /elk/",
+        "zw":"麋鹿"
+      }
+
+    ],
+    "fish":   [
+      {
+        "word": "dolphin",
+        "yb":" /ʃiːp/",
+        "zw":"海豚"
+      },
+      {
+        "word": "crab",
+        "yb":" /ʃiːp/",
+        "zw":"螃蟹"
+      },
+      {
+        "word": "jellyfish",
+        "yb":" /ˈdʒelifɪʃ/",
+        "zw":"水母"
+      },
+
+      {
+        "word": "octopus",
+        "yb":" /ˈɑːktəpʊs/",
+        "zw":"章鱼"
+      },
+      {
+        "word": "cuttlefish",
+        "yb":" /ˈkʌtlfɪʃ/",
+        "zw":"乌贼"
+      },
+      {
+        "word": "seahorse",
+        "yb":" /ˈsiːhɔːrs/",
+        "zw":"海马"
+      },
+      {
+        "word": "shark",
+        "yb":" /ʃɑːrk/",
+        "zw":"鲨鱼"
+      },
+      {
+        "word": "stingray",
+        "yb":" /ˈstɪŋreɪ/",
+        "zw":"黄貂鱼"
+      },
+      {
+        "word": "whale",
+        "yb":" /weɪl/",
+        "zw":"鲸"
+      }
+    ]
+  }
+
+
+
+}
