@@ -38,6 +38,10 @@
 
 }
 
+ul.pinyin_card{
+	scroll-padding-block-start: 0px;
+}
+
 ul.pinyin_card > li{
 
 	padding: 20px 10px;
@@ -68,8 +72,10 @@ ul.pinyin_card > li{
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-
     font-size: 28px;
+	height: 90px;
+	width: 20%;
+
 
 
 }
@@ -126,25 +132,31 @@ ul.pinyin_card>li.no-exists:hover{
 ul.pinyin_card > li:nth-child(1){
 	background-color: #337ab7;
 	display: block;
-	width: 120px;
+	width: 20%;
+	height: 180px;
 	
 	line-height: 80px;
 	font-size: 80px;
 	text-align: center;
 	margin: 0 auto;
+	float: left;
 }
+
+
 
 /*ul.pinyin_card > li:first-child:nth-last-child(7),*/
 ul.pinyin_card > li:first-child:nth-last-child(10) ~ li,
 ul.pinyin_card > li:first-child:nth-last-child(11) ~ li,
 ul.pinyin_card > li:first-child:nth-last-child(7) ~ li{
-    width: 30%;
+    width: 25%;
+	float: right;
 }
 
 .yunmubiao>div>div.portfolio-info>ul.pinyin_card > li,
 .shengmu>div>div.portfolio-info>ul.pinyin_card > li,
 .zhengtirendu>div>div.portfolio-info>ul.pinyin_card > li{
 	font-size: 30px;
+	height: 90px;
 }
 ul.pinyin_card>li>small{
 	font-size: 14px;display: block;line-height: 5px;

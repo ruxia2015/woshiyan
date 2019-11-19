@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Portfolio Three Columns | Triangle</title>
+    <title>英语动物词汇| 我师焉</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/lightbox.css" rel="stylesheet">
@@ -24,15 +24,16 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
     <style>
-        dl.word >dd {
-            padding: 10px ;
+        dl.word > dd {
+            padding: 10px;
             background-color: #4cae4c;
             font-size: large;
             color: #fff;
             margin: 2px;
             float: left;
         }
-        dl.word >dd:hover{
+
+        dl.word > dd:hover {
             cursor: pointer;
         }
     </style>
@@ -76,16 +77,20 @@
 
                     <div class="portfolio-items" id="app">
                         <template v-for="(tmp, key) in info.animals">
-                            <div class="col-xs-12 col-sm-12 col-md-12 portfolio-item  "  :class="key"  >
+                            <div class="col-xs-12 col-sm-12 col-md-12 portfolio-item  " :class="key">
                                 <div class="portfolio-wrapper">
                                     <div class="portfolio-info ">
                                         <div class="portfolio-single">
                                             <div class="portfolio-thumb">
-                                                <img :src="'picture/'+key+'.jpg'" class="img-responsive" alt="" style="max-height: 300px;width: auto;">
+                                                <img :src="'picture/'+key+'.jpg'" class="img-responsive" alt=""
+                                                     style="max-height: 300px;width: auto;">
                                             </div>
                                         </div>
                                         <dl class="word">
-                                            <dd style=""  v-for="(value, index) in tmp" v-on:click="englishPlay" ><rt>{{value.word}}</rt> {{value.yb}}  {{value.zw}}</dd>
+                                            <dd style="" v-for="(value, index) in tmp" v-on:click="englishPlay">
+                                                <rt>{{value.word}}</rt>
+                                                {{value.yb}} {{value.zw}}
+                                            </dd>
                                         </dl>
                                     </div>
                                 </div>
@@ -95,19 +100,19 @@
 
                     </div>
                     <!--<div class="portfolio-pagination">-->
-                        <!--<ul class="pagination">-->
-                            <!--<li><a href="#">left</a></li>-->
-                            <!--<li><a href="#">1</a></li>-->
-                            <!--<li><a href="#">2</a></li>-->
-                            <!--<li class="active"><a href="#">3</a></li>-->
-                            <!--<li><a href="#">4</a></li>-->
-                            <!--<li><a href="#">5</a></li>-->
-                            <!--<li><a href="#">6</a></li>-->
-                            <!--<li><a href="#">7</a></li>-->
-                            <!--<li><a href="#">8</a></li>-->
-                            <!--<li><a href="#">9</a></li>-->
-                            <!--<li><a href="#">right</a></li>-->
-                        <!--</ul>-->
+                    <!--<ul class="pagination">-->
+                    <!--<li><a href="#">left</a></li>-->
+                    <!--<li><a href="#">1</a></li>-->
+                    <!--<li><a href="#">2</a></li>-->
+                    <!--<li class="active"><a href="#">3</a></li>-->
+                    <!--<li><a href="#">4</a></li>-->
+                    <!--<li><a href="#">5</a></li>-->
+                    <!--<li><a href="#">6</a></li>-->
+                    <!--<li><a href="#">7</a></li>-->
+                    <!--<li><a href="#">8</a></li>-->
+                    <!--<li><a href="#">9</a></li>-->
+                    <!--<li><a href="#">right</a></li>-->
+                    <!--</ul>-->
                     <!--</div>-->
                 </div>
             </div>
@@ -129,7 +134,7 @@
                             </div>
                             <div class="media-body">
                                 <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
-                                <p>posted on  07 March 2014</p>
+                                <p>posted on 07 March 2014</p>
                             </div>
                         </div>
                         <div class="media">
@@ -138,7 +143,7 @@
                             </div>
                             <div class="media-body">
                                 <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
-                                <p>posted on  07 March 2014</p>
+                                <p>posted on 07 March 2014</p>
                             </div>
                         </div>
                         <div class="media">
@@ -147,7 +152,7 @@
                             </div>
                             <div class="media-body">
                                 <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
-                                <p>posted on  07 March 2014</p>
+                                <p>posted on 07 March 2014</p>
                             </div>
                         </div>
                     </div>
@@ -175,12 +180,18 @@
 
 
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script>
+    moduleLoad("./template/page-template.html");
+</script>
+
+
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
 <script type="text/javascript" src="js/lightbox.min.js"></script>
 <script type="text/javascript" src="js/wow.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+
 <script type="text/javascript" src="js/vue.min.js"></script>
 <script type="text/javascript" src="js/axios.min.js"></script>
 
@@ -196,22 +207,20 @@
             var speed = $("input[name='speed']:checked").val();
             var lan = $("input[name='lan']:checked").val();
 
-            englishRead(attr,way,speed,lan);
+            englishRead(attr, way, speed, lan);
         })
-
-        moduleLoad("./template/page-template.html");
 
 
         new Vue({
             el: '#app',
-            data () {
+            data() {
                 return {
                     info: null
                 }
             },
 
-            methods:{
-                englishPlay:function(event){
+            methods: {
+                englishPlay: function (event) {
                     var $this = $(event.toElement);
                     var attr = $this.find("rt").text()
 
@@ -219,10 +228,10 @@
                     var speed = $("input[name='speed']:checked").val();
                     var lan = $("input[name='lan']:checked").val();
 
-                    englishRead(attr,way,speed,lan);
+                    englishRead(attr, way, speed, lan);
                 }
             },
-            mounted () {
+            mounted() {
                 axios
                     .get('data/english.json')
                     .then(response => (this.info = response.data))
@@ -231,10 +240,6 @@
                     });
             }
         })
-
-
-
-
 
 
     })

@@ -104,6 +104,9 @@ function moduleLoad(url) {
     });
 }
 
+
+
+
 // function autoCreateCompent(url){
 
 //  $.get(url, function (result) {
