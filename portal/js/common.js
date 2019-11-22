@@ -92,7 +92,8 @@ function audioPlay(filePath){
 }
 
 
-function moduleLoad(url) {
+function  moduleLoad(url) {
+    $.ajaxSettings.async = false;
     $.get(url, function (result) {
         var html = $(result);
         var __templates = html;
@@ -102,6 +103,7 @@ function moduleLoad(url) {
             $(this).html(body);
         });
     });
+    $.ajaxSettings.async = true;
 }
 
 

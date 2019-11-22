@@ -45,6 +45,10 @@
             background-color: antiquewhite;
          }
 
+        [mp3]:hover{
+            cursor: pointer;
+        }
+
 
 
     </style>
@@ -74,11 +78,13 @@
     <section id="portfolio">
         <div class="container">
             <div class="row">
+                 <div class="col-md-9 col-sm-8">
+                <div class="row">
                 <ul class="portfolio-filter text-center">
                     <li><a class="btn btn-default active" href="#" data-filter="*">全部</a></li>
+                    <li><a class="btn btn-default" href="#" data-filter=".db">国际音标KK音标对比</a></li>
                     <li><a class="btn btn-default" href="#" data-filter=".guoji">国际音标</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".db">KK音标</a></li>
-                    
+
 
                 </ul><!--/#portfolio-filter-->
                     
@@ -258,7 +264,7 @@
                                 <th rowspan="5" >元音</th>
                                 <th rowspan="3" >单元音</th>
                                 <th >前元音</th>
-                                <td  mp3="yinbiao/i-sound2.mp3"><span><a href="/show-47-20-1.html" target="_blank">i:</a></span></td>
+                                <td  mp3="yinbiao/i-sound2.mp3"><span>i:</span></td>
                                 <td  mp3="yinbiao/i-sound.mp3"><span>ɪ</span></td>
 
                                 <td  mp3="yinbiao/e-sound.mp3"><span>e</span></td>
@@ -400,6 +406,62 @@
                    
 
                 </div>
+                </div>
+                 </div>
+                 <div class="col-md-3 col-sm-4 padding-top">
+                <div class="sidebar portfolio-sidebar">
+                    <div class="sidebar-item categories">
+                        <h3>分类</h3>
+                        <ul class="nav navbar-stacked">
+                            <li class="active"><a href="yy-yinbiao.html">英语音标<span class="pull-right"></span></a></li>
+                            <li><a href="yy-kk.html">KK音标<span class="pull-right"></span></a></li>
+                            <li><a href="yy-sx.html">十二生肖<span class="pull-right"></span></a></li>
+                            <li><a href="yy-dongwu.html">动物<span class="pull-right"></span></a></li>
+                        </ul>
+                    </div>
+                    <!--<div class="sidebar-item  recent">-->
+                        <!--<h3>Recent Projects</h3>-->
+                        <!--<div class="media">-->
+                            <!--<div class="pull-left">-->
+                                <!--<a href="#"><img src="images/portfolio/project1.jpg" alt=""></a>-->
+                            <!--</div>-->
+                            <!--<div class="media-body">-->
+                                <!--<h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>-->
+                                <!--<p>posted on 07 March 2014</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="media">-->
+                            <!--<div class="pull-left">-->
+                                <!--<a href="#"><img src="images/portfolio/project2.jpg" alt=""></a>-->
+                            <!--</div>-->
+                            <!--<div class="media-body">-->
+                                <!--<h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>-->
+                                <!--<p>posted on 07 March 2014</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="media">-->
+                            <!--<div class="pull-left">-->
+                                <!--<a href="#"><img src="images/portfolio/project3.jpg" alt=""></a>-->
+                            <!--</div>-->
+                            <!--<div class="media-body">-->
+                                <!--<h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>-->
+                                <!--<p>posted on 07 March 2014</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="sidebar-item popular">-->
+                        <!--<h3>Popular Projects</h3>-->
+                        <!--<ul class="gallery">-->
+                            <!--<li><a href="#"><img src="images/portfolio/popular1.jpg" alt=""></a></li>-->
+                            <!--<li><a href="#"><img src="images/portfolio/popular2.jpg" alt=""></a></li>-->
+                            <!--<li><a href="#"><img src="images/portfolio/popular3.jpg" alt=""></a></li>-->
+                            <!--<li><a href="#"><img src="images/portfolio/popular4.jpg" alt=""></a></li>-->
+                            <!--<li><a href="#"><img src="images/portfolio/popular5.jpg" alt=""></a></li>-->
+                            <!--<li><a href="#"><img src="images/portfolio/popular1.jpg" alt=""></a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -433,6 +495,12 @@
                 soundPlay("english/"+attr);
             })
 
+              $("[mp3]").hover(function () {
+
+                var $this = $(this);
+                var attr = $this.attr("mp3")
+                soundPlay("english/"+attr);
+            })
 
         })
     </script>
