@@ -50,15 +50,15 @@
             <div class="row">
                 
                 <div class="col-md-9 col-sm-9 ">
-               <!--  <ul class="portfolio-filter text-center">
-                    <li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
-                    <li><a class="btn btn-default" href="#yunmu" data-filter=".branded">韵母</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".design">Design</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".folio">Folio</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".logos">Logos</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".mobile">Mobile</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".mockup">Mockup</a></li>
-                </ul>--><!--/#portfolio-filter-->
+              <!--<ul class="portfolio-filter text-center">-->
+                    <!--<li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>-->
+                    <!--<li><a class="btn btn-default" href="#yunmu" data-filter=".branded">韵母</a></li>-->
+                    <!--<li><a class="btn btn-default" href="#" data-filter=".design">Design</a></li>-->
+                    <!--<li><a class="btn btn-default" href="#" data-filter=".folio">Folio</a></li>-->
+                    <!--<li><a class="btn btn-default" href="#" data-filter=".logos">Logos</a></li>-->
+                    <!--<li><a class="btn btn-default" href="#" data-filter=".mobile">Mobile</a></li>-->
+                    <!--<li><a class="btn btn-default" href="#" data-filter=".mockup">Mockup</a></li>-->
+                <!--</ul>-->
                 
                 <div class="portfolio-items">
                     <div class="col-sm-12 portfolio-item branded logos">
@@ -209,8 +209,15 @@
                                 <li><a href="#pinyin_c">c</a></li>
                                 <li><a href="#pinyin_s">s</a></li>
                                 <li><a href="#pinyin_y">y</a></li>
-                                <li><a href="#pinyin_w">w</a></li>                          
+                                <li><a href="#pinyin_w">w</a></li>
+                                <li>声调 </li>
+                                <li> <input type="radio" name="shengdiao" value="1" checked><label style="margin-right: 10px;">一声</label></li>
+                                <li> <input type="radio"  name="shengdiao" value="2" id="shengdiao2"><label for="shengdiao2" style="margin-right: 10px;">二声</label></li>
+                                <li> <input type="radio"  name="shengdiao" value="3"><label style="margin-right: 10px;">三声</label></li>
+                                <li><input type="radio"  name="shengdiao"  value="4"><label style="margin-right: 10px;">四声</label></li>
+
                             </ul>
+
                         </div>
                     </div>
 
@@ -245,8 +252,16 @@
             $("rt[pinyin],h1[pinyin]").parent().click(function () {
 
                 var $this = $(this);
-                var pinyin = $this.find("rt").attr("pinyin")
+                var pinyin = $this.find("rt").attr("pinyin");
+
+                var shengdiao = $("input[name='shengdiao']:checked").val();
+                pinyin = pinyin.substr(0,pinyin.length-1)+shengdiao;
                 pinyinRead(pinyin);
+            })
+
+            $("input[name='shengdiao']").parent("li").click(function () {
+                var $this = $(this);
+                $this.find("input")[0].click();
             })
 
 
