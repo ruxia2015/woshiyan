@@ -210,11 +210,13 @@
                                 <li><a href="#pinyin_s">s</a></li>
                                 <li><a href="#pinyin_y">y</a></li>
                                 <li><a href="#pinyin_w">w</a></li>
-                                <li>声调 </li>
+                                <li> <input type="radio" name="shengdiao" value="5" checked><label style="margin-right: 10px;">轻音</label></li>
                                 <li> <input type="radio" name="shengdiao" value="1" checked><label style="margin-right: 10px;">一声</label></li>
                                 <li> <input type="radio"  name="shengdiao" value="2" id="shengdiao2"><label for="shengdiao2" style="margin-right: 10px;">二声</label></li>
                                 <li> <input type="radio"  name="shengdiao" value="3"><label style="margin-right: 10px;">三声</label></li>
                                 <li><input type="radio"  name="shengdiao"  value="4"><label style="margin-right: 10px;">四声</label></li>
+                                <li><input type="radio"  name="yumu"  value="1"><label style="margin-right: 10px;">显全部</label></li>
+                                <li><input type="radio"  name="yumu"  value="2"><label style="margin-right: 10px;">显相同韵母</label></li>
 
                             </ul>
 
@@ -249,20 +251,71 @@
 
     <script>
         $(document).ready(function () {
+            var lastPinyin = "";
             $("rt[pinyin],h1[pinyin]").parent().click(function () {
 
                 var $this = $(this);
                 var pinyin = $this.find("rt").attr("pinyin");
 
                 var shengdiao = $("input[name='shengdiao']:checked").val();
+                lastPinyin =pinyin.substr(0,pinyin.length-1);
                 pinyin = pinyin.substr(0,pinyin.length-1)+shengdiao;
                 pinyinRead(pinyin);
+
+                displaySome()
             })
+
+            $("input[name='shengdiao']").parent("li").css("background-color","#E91E63");
+            $("input[name='yumu']").parent("li").css("background-color","#1441ff");
 
             $("input[name='shengdiao']").parent("li").click(function () {
                 var $this = $(this);
                 $this.find("input")[0].click();
             })
+
+            $("input[name='shengdiao']").click(function () {
+                if(lastPinyin==""){
+                    return;
+                }
+                var $this = $(this);
+                var shengdiao = $this.val();
+                var pinyin = lastPinyin+shengdiao;
+                pinyinRead(pinyin);
+            });
+
+
+            $("input[name='yumu']").parent("li").click(function () {
+                var $this = $(this);
+                $this.find("input")[0].click();
+            })
+
+            $("input[name='yumu']").click(function(){
+                var $this = $(this);
+                var value = $this.val();
+                displaySome()
+
+            })
+
+            function displaySome(){
+                var value = $("input[name='yumu']:checked").val();
+                if(value==1){
+                    $("rt[pinyin]").parent().show();
+
+                }else if(value==2){
+                    $("rt[pinyin]").parent().hide();
+                    // $("rt[pinyin]").parent().parent().find("li:first").show();
+
+                    var yunmu = lastPinyin.substring(1,lastPinyin.length);
+                    if(lastPinyin.indexOf("h")>0){
+                        yunmu = lastPinyin.substring(2,lastPinyin.length);
+                    }
+
+                    $("rt[pinyin*='"+yunmu+"']").parent().show();
+
+                }
+
+            }
+
 
 
         })
