@@ -1,8 +1,8 @@
 
 
 // const server = 'http://192.168.64.2/api/music.php?type=';
+//const server = './js/data.json?type=';
 const server = 'https://www.zhanhu56.com/api/music/index.php?type=';
-
  class musicHandle{
 
   constructor(){
@@ -182,6 +182,7 @@ const server = 'https://www.zhanhu56.com/api/music/index.php?type=';
     ajax({
       url: server + 'musicList',
       dataType: 'json',
+      crossDomain:true,
       data: {
         page: 0
       },

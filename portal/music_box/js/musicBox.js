@@ -156,8 +156,10 @@ class MusicBox {
     for(let i = 0; i < this.arrNotes.length; i++){
       noteClass = (this.arrNotes[i] >= 'a' && this.arrNotes[i] <= 'g') ? 'low' : ((this.arrNotes[i] >= 'A' && this.arrNotes[i] <= 'G') ? 'high' : '');
       li += '<li><span>'+String.fromCharCode(this.keyCodes[i])
-            +'<lable style="margin-top: 110px;display: block;text-align:center; color: #FF5722;">'+yinfu[i%7]+'</lable>'+'</span><i class="'+ noteClass +'">'+ 
-      (lowHighNote[this.arrNotes[i].toLowerCase()] || this.arrNotes[i]) +'</i></li>'
+            +'<lable style="margin-top: 70px;display: block;text-align:center; color: #FF5722;">'+yinfu[i%7]+'</lable>'
+            +'<lable style="margin-top: 25px;display: block;text-align:center; color: #8BC34A;"">'+this.arrNotes[i]+'</lable>'+
+            '</span><i class="'+ noteClass +'">'+ 
+      (lowHighNote[this.arrNotes[i].toLowerCase()] || this.arrNotes[i]) + '</i></li>'
     }
 
     musicBtns.innerHTML = '<ul>'+ li +'</ul>';
